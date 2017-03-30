@@ -4,7 +4,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 import {Meteor} from 'meteor/meteor';
 import {Animales} from '../api/animales'
 import {FlowRouter} from 'meteor/kadira:flow-router';
-
+// Que haces con el Flow Router??? No veo que lo utilizes en tu codigo
 class Finca extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +14,7 @@ class Finca extends Component {
             animals: Animales.find({farm: this.props.finca._id, owner: Meteor.userId()})
         }
     }
+    
 
     deleteFinca(name) {
         const texto = "Se ha eliminado la finca \"" +name+ "\"" ;
@@ -29,6 +30,7 @@ class Finca extends Component {
             });
 
         };
+            // Deberias realizar el metodo con callback y mirar si por algun motivo falla o no se encuntra, manejo de errores y notificaciones al usuario
         const deleteThisFarm =()=> {
             Meteor.call('fincas.remove', this.props.finca._id);
         };
@@ -70,7 +72,7 @@ class Finca extends Component {
         return "fincas/" + this.props.finca._id + "/animales"
     }
 
-
+// PAra que utilizas este metodo ? no tiene ningun proposito
     componentDidMount() {
         console.log("im finca");
         // this.getAnimales();
