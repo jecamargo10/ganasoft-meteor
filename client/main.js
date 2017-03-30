@@ -7,7 +7,7 @@ import ListaFincas from '../imports/ui/ListaFincas'
 import Home from '../imports/ui/Home';
 import Animal from '../imports/ui/Animal';
 import '../imports/api/fincas.js';
-
+//Con React podrias ahorrar tener que usar estas redirecciones y ahorrarte ese trabajo
 FlowRouter.route('/', {
     name: 'Home',
     action() {
