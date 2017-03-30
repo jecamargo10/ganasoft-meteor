@@ -4,6 +4,7 @@ import { check } from 'meteor/check';
 
 export const Farms = new Mongo.Collection('fincas');
 
+
 if (Meteor.isServer) {
   Meteor.publish('fincas', function farmsPublication() {
     return Farms.find({
@@ -17,6 +18,7 @@ if (Meteor.isServer) {
 Meteor.methods({
   'fincas.insert'(name) {
     check(name, String);
+    //Muy bien que utilices las recomendaciones de seguridad que tiene Meteor
 
     // Make sure the user is logged in before inserting a task
     if (! this.userId) {
