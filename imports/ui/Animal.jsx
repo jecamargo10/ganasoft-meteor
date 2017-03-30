@@ -30,6 +30,7 @@ class Animal extends Component {
     insertAnimal()
     {
         console.log(FlowRouter.getParam('fincaId'))
+        // Que contingencia tienes si hay algun tipo de error ? ten cuidado por si el meotodo se demora mas en el server y no lo espera el FE
         Meteor.call('animales.insert',FlowRouter.getParam('fincaId'),this.state.number,this.state.especie,
             this.state.raza,this.state.sexo,this.state.descripcion);
     }
