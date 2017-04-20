@@ -31,7 +31,7 @@ class ListaFincas extends Component {
 
         // Find the text field via the React ref
         const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
+// podrias añadir una verficiacion si el metodo fallar e informarle al usuario
         Meteor.call('fincas.insert', text);
 
         // Clear form
