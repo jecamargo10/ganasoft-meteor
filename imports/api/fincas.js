@@ -29,6 +29,7 @@ Meteor.methods({
       owner: this.userId,
     });
   },
+  // Que sucede si hay un problema con el metodo ? el usuario no se enteraria ? no tienes contigencia de errores ya en ejecucion, estan los test pero si llegase a fallar el usuario no se enteraria
   'fincas.remove'(farmId) {
     console.log(farmId);
 
