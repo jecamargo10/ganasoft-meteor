@@ -13,7 +13,7 @@ if (Meteor.isServer) {
     });
   });
 }
-
+//Por que dejas el meteor method por fuera de servidor ? eso no es seguro, pon todo dentro de la verificacion del servidor, no debe ser accesible tales tareas para el cliente por mas que verifiques la indentidad
 Meteor.methods({
   'fincas.insert'(name) {
     check(name, String);
