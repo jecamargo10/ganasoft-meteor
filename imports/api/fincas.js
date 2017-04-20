@@ -31,7 +31,7 @@ Meteor.methods({
   },
   'fincas.remove'(farmId) {
     console.log(farmId);
-
+// Muy bien que verificque la autorizacion del usuario antes de activar cualquier metodo
     const farm = Farms.findOne(farmId);
     if (farm.owner !== this.userId) {
       // If the task is private, make sure only the owner can delete it
