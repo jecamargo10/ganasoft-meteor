@@ -64,6 +64,7 @@ Factory.define('animalestest', Animales, {
                 const towner = faker.lorem.word();
                 numberA = tnumber;
 
+                // Muy bien que pruebes las funcionalidades criticas de tu App para que no inicie sin antes verificar el agregar e insertar!
                 Meteor.call('animales.insert',
                         tfarm,
                         tnumber,
