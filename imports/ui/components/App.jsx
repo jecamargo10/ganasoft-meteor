@@ -50,6 +50,9 @@ class App extends Component {
                         <div className="col-md-1"></div>
                         {this.props.main}
                     </div>
+                    
+                    
+                    {/* Borra estos divs que estan abiertos sin tag inicial  */}
                 </ div >
             </ div >
         )
